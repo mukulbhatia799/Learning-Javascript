@@ -21,10 +21,14 @@ const flight3 = {
     timings: '3am to 2pm'
 }
 const f1 = flightDetails.display;
+// call
 f1.call(flightDetails, 1200, 'Nikhil');
 f1.call(flight2, 1200, 'Nikhil');
 f1.call(flight3, 1200, 'Nikhil');
 
+// apply
 f1.apply(flightDetails, [1200, 'Nikhil']);
 f1.apply(flight2, [1200, 'Nikhil']);
 f1.apply(flight3, [1200, 'Nikhil']);
+
+// bind
