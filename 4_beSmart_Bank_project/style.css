@@ -1,0 +1,194 @@
+body {
+    background-color:#e8e4e4;
+    /* background-color:rgb(247, 239, 229);  */
+}
+hr {
+    border: 1px solid black;
+}
+button {
+    cursor: pointer;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.website-logo {
+    width: 100px;
+}
+
+.login-form > input {
+    font-size: 20px;
+    width: 130px;
+    border: 2px solid rgb(54, 43, 69);
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-sizing:border-box;
+}
+
+.login-form > input:hover {
+    border: 3px solid rgb(54, 43, 69);
+}
+
+.login-credentials {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-body {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.deposit-withdraw-date {
+    display: grid;
+    gap: 10px;
+}
+
+.transactions-div {
+    display: grid;
+    gap: 20px;
+    width: 60%;
+    font-size: 18px;
+}
+
+.current-balance {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.curr-bal-details > p {
+    margin-top: -15px;
+}
+
+.current-amount {
+    font-size: 30px;
+}
+
+.current-user-transactions-and-transfer-request-close {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.current-user-transactions {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.current-user-transactions > div {
+    padding: 10px;
+}
+
+.deposited-transaction {
+    background-color:lightgreen;
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+}
+
+.withdrawal-transaction {
+    background-color: rgb(234, 99, 99);  
+    padding: 5px 10px 5px 10px;
+    border-radius: 20px;
+}
+
+.transfer-request-close-account {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.user-transaction-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-transfer-to-amount {
+    display: flex;
+    gap: 10px;
+}
+
+.transfer-money {
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.input-transfer-to,
+.input-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-transfer-to > input,
+.input-amount > input {
+    font-size: 20px;
+    padding: 5px;
+    width: 150px;
+    border-radius: 8px;
+    height: 40px;
+    box-sizing:border-box;
+}
+
+.input-transfer-to > input:focus,
+.input-amount > input:focus {
+    background-color: white;
+}
+
+.request-loan {
+    background-color: rgb(59, 154, 59);
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.submit-arrow {
+    background-color: rgb(89, 89, 226);
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 10px;
+    box-sizing:border-box;
+    font-weight: bold;
+}
+
+.submit-arrow:hover {
+    background-color: blue;
+}
+
+.transfer-money {
+    background-color: rgb(238, 185, 10);
+}
+
+.close-account {
+    background-color:rgb(248, 70, 70);
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .user-transaction-details {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+    }
+    .current-user-transactions-and-transfer-request-close {
+        display: flex;
+        flex-direction: column;
+    }
+}
