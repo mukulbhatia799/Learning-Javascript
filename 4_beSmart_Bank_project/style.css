@@ -45,6 +45,8 @@ button {
     width: 100%;
     display: flex;
     justify-content: center;
+    /* when user credentials is true, main-body will be displayed and opacity become 100. */
+    opacity: 0;
 }
 
 .deposit-withdraw-date {

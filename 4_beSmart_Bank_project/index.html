@@ -8,17 +8,17 @@
 </head>
 <body>
     <div class="nav-bar">
-        <h2>Good Afternoon, Mukul</h2>
+        <h2 class="welcome-text">Enter login credentials...</h2>
         <img src="./images/beSmart_bank_logo.png" alt="website logo" class="website-logo">
         <div class="login-credentials">
             <form action="./action_page.php" class="login-form">
-                <input type="text" placeholder="user">
-                <input type="password" placeholder="PIN">
+                <input type="text" id="user-ID" placeholder="user" class="nav-user-id-input">
+                <input type="password" id="user-Pin" placeholder="PIN" maxlength="4" class="nav-user-pin-input">
             </form>
             <button class="submit-arrow">Login</button>
         </div>
     </div>
-    <div class="main-body">
+    <main class="main-body">
         <div class="transactions-div">
             <div class="current-balance">
                 <div class="curr-bal-details">
@@ -26,7 +26,7 @@
                     <p>As of <span class="curr-date">3/9/2024</span>, <span class="curr-time">3:12 PM</span></p>
                 </div>
                 <div class="current-amount">
-                    <p>$16,720.00</p>
+                    <p>$00.00</p>
                 </div>
             </div>
             <div class="current-user-transactions-and-transfer-request-close">
@@ -47,7 +47,7 @@
                         <div class="current-transaction-amount">-$30.00</div>
                     </div>
                     <hr>
-                    <div class="user-transaction-details">
+                    <!-- <div class="user-transaction-details">
                         <div class="deposit-withdraw-date">
                             <span class="deposited-transaction">DEPOSIT</span>
                             <span class="">TODAY</span>
@@ -85,18 +85,18 @@
                             <span class="">TODAY</span>
                         </div>
                         <div class="current-transaction-amount">$5,000.00</div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="transfer-request-close-account">
                     <div class="transfer-money">
                         <h1>Transfer money</h1>
                         <div class="input-transfer-to-amount">
                             <div class="input-transfer-to">
-                                <input type="text" id="username">
+                                <input type="text">
                             <label for="Transfer to">Transfer to</label>
                             </div>
                             <div class="input-amount">
-                                <input type="text" id="amount">
+                                <input type="text">
                                 <label for="Transfer to">Amount</label>
                             </div>
                             <button class="btn submit-arrow">Transfer</button>
@@ -106,7 +106,7 @@
                         <h1>Request loan</h1>
                         <div class="input-transfer-to-amount">
                             <div class="input-amount">
-                                <input type="text" id="amount">
+                                <input type="text">
                                 <label for="Transfer to">Amount</label>
                             </div>
                             <button class="btn submit-arrow">Transfer</button>
@@ -116,11 +116,11 @@
                         <h1>Close account</h1>
                         <div class="input-transfer-to-amount">
                             <div class="input-transfer-to">
-                                <input type="text" id="username">
+                                <input type="text">
                             <label for="Transfer to">Transfer to</label>
                             </div>
                             <div class="input-amount">
-                                <input type="text" id="amount">
+                                <input type="text">
                                 <label for="Transfer to">Amount</label>
                             </div>
                             <button class="btn submit-arrow">Transfer</button>
@@ -129,7 +129,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script src="./script.js"></script>
 </body>
