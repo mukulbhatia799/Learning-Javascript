@@ -11,11 +11,16 @@
         <h2 class="welcome-text">Enter login credentials...</h2>
         <img src="./images/beSmart_bank_logo.png" alt="website logo" class="website-logo">
         <div class="login-credentials">
-            <form action="./action_page.php" class="login-form">
-                <input type="text" id="user-ID" placeholder="user" class="nav-user-id-input">
-                <input type="password" id="user-Pin" placeholder="PIN" maxlength="4" class="nav-user-pin-input">
-            </form>
-            <button class="submit-arrow">Login</button>
+            <div class="login-form">
+                <form action="./action_page.php">
+                    <input type="text" id="user-ID" placeholder="user" class="nav-user-id-input">
+                    <input type="password" id="user-Pin" placeholder="PIN" maxlength="4" class="nav-user-pin-input">
+                </form>
+                <button class="submit-arrow">Login</button>
+            </div>
+            <div class="wrong-creadentials-text">
+                <p>User not found, check user id/password.</p>
+            </div>
         </div>
     </div>
     <main class="main-body">
@@ -47,45 +52,6 @@
                         <div class="current-transaction-amount">-$30.00</div>
                     </div>
                     <hr>
-                    <!-- <div class="user-transaction-details">
-                        <div class="deposit-withdraw-date">
-                            <span class="deposited-transaction">DEPOSIT</span>
-                            <span class="">TODAY</span>
-                        </div>
-                        <div class="current-transaction-amount">$8,500.00</div>
-                    </div>
-                    <hr>
-                    <div class="user-transaction-details">
-                        <div class="deposit-withdraw-date">
-                            <span class="withdrawal-transaction">WITHDRAW</span>
-                            <span class="">TODAY</span>
-                        </div>
-                        <div class="current-transaction-amount">$5,000.00</div>
-                    </div>
-                    <hr>
-                    <div class="user-transaction-details">
-                        <div class="deposit-withdraw-date">
-                            <span class="withdrawal-transaction">WITHDRAW</span>
-                            <span class="">TODAY</span>
-                        </div>
-                        <div class="current-transaction-amount">$5,000.00</div>
-                    </div>
-                    <hr>
-                    <div class="user-transaction-details">
-                        <div class="deposit-withdraw-date">
-                            <span class="withdrawal-transaction">WITHDRAW</span>
-                            <span class="">TODAY</span>
-                        </div>
-                        <div class="current-transaction-amount">$5,000.00</div>
-                    </div>
-                    <hr>
-                    <div class="user-transaction-details">
-                        <div class="deposit-withdraw-date">
-                            <span class="deposited-transaction">DEPOSIT</span>
-                            <span class="">TODAY</span>
-                        </div>
-                        <div class="current-transaction-amount">$5,000.00</div>
-                    </div> -->
                 </div>
                 <div class="transfer-request-close-account">
                     <div class="transfer-money">
