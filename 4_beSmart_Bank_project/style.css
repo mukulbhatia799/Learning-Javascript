@@ -13,31 +13,47 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    line-height:23px;
+    vertical-align: top;
 }
 
 .website-logo {
     width: 100px;
 }
 
-.login-form > input {
+.login-form {
+    display: flex;
+    align-items: center;
+}
+
+.login-form > form > input {
+    margin: 5px;
     font-size: 20px;
     width: 130px;
-    border: 2px solid rgb(54, 43, 69);
+    border: none;
     padding: 15px;
     border-radius: 20px;
     text-align: center;
     box-sizing:border-box;
 }
 
-.login-form > input:hover {
-    border: 3px solid rgb(54, 43, 69);
+.login-form > form > input:hover {
+    border: 1px solid rgb(0, 0, 0);
+    
 }
 
 .login-credentials {
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     justify-content: center;
     align-items: center;
+}
+
+.wrong-creadentials-text {
+    display:none;
+    color: red;
+    font-weight: bold;
+    text-align: center;
 }
 
 .main-body {
@@ -82,12 +98,14 @@ button {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
+    height: 700px;
 }
 
 .current-user-transactions {
     background-color: white;
     padding: 30px;
     border-radius: 20px;
+    overflow: scroll;
 }
 
 .current-user-transactions > div {
