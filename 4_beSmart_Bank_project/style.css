@@ -38,7 +38,8 @@ button {
 }
 
 .login-form > form > input:hover {
-    border: 1px solid rgb(0, 0, 0);
+    /* border: 1px solid rgb(0, 0, 0); */
+    background-color: lightgray;
     
 }
 
@@ -62,7 +63,7 @@ button {
     display: flex;
     justify-content: center;
     /* when user credentials is true, main-body will be displayed and opacity become 100. */
-    opacity: 0;
+    opacity: 100;
 }
 
 .deposit-withdraw-date {
@@ -89,8 +90,9 @@ button {
     margin-top: -15px;
 }
 
-.current-amount {
+.current-balance-amount {
     font-size: 30px;
+    font-weight: bold;
 }
 
 .current-user-transactions-and-transfer-request-close {
@@ -98,14 +100,14 @@ button {
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
-    height: 700px;
+    /* height: 700px; */
 }
 
 .current-user-transactions {
     background-color: white;
     padding: 30px;
     border-radius: 20px;
-    overflow: scroll;
+    overflow-y:scroll;
 }
 
 .current-user-transactions > div {
@@ -131,12 +133,16 @@ button {
     gap: 25px;
 }
 
+.transfer-money, .request-loan, .close-account {
+    height: 230px;
+}
+
 .user-transaction-details {
     display: flex;
     justify-content: space-between;
 }
 
-.input-transfer-to-amount {
+.transfer-to-form, .request-loan-form, .close-account-form  {
     display: flex;
     gap: 10px;
 }
@@ -147,14 +153,28 @@ button {
     font-size: 20px;
 }
 
-.input-transfer-to,
+.display-insufficient-balance {
+    position: absolute;
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
+.display-transfer-to-user-not-found {
+    position: absolute;
+    display: none;
+    color: red;
+    font-weight: bold;
+}
+
+.transfer-to-div,
 .input-amount {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.input-transfer-to > input,
+.transfer-to-div > input,
 .input-amount > input {
     font-size: 20px;
     padding: 5px;
@@ -164,7 +184,7 @@ button {
     box-sizing:border-box;
 }
 
-.input-transfer-to > input:focus,
+.transfer-to-div > input:focus,
 .input-amount > input:focus {
     background-color: white;
 }
@@ -176,7 +196,7 @@ button {
     font-size: 20px;
 }
 
-.submit-arrow {
+.btn {
     background-color: rgb(89, 89, 226);
     color: white;
     font-size: 20px;
@@ -186,7 +206,7 @@ button {
     font-weight: bold;
 }
 
-.submit-arrow:hover {
+.btn:hover {
     background-color: blue;
 }
 
@@ -201,14 +221,38 @@ button {
     font-size: 20px;
 }
 
-@media (max-width: 900px) {
-    .user-transaction-details {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        gap: 10px;
-    }
+.in-out-interest-div {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 0;
+}
+
+.in-total-credited {
+    color: green;
+}
+
+.out-total-debited {
+    color: red;
+}
+
+.interest-amount {
+    color:rgb(152, 165, 6);
+}
+
+@media (max-width: 1300px) {
     .current-user-transactions-and-transfer-request-close {
         display: flex;
         flex-direction: column;
+    }
+    .current-user-transactions {
+        height: 200px;
     }
 }
