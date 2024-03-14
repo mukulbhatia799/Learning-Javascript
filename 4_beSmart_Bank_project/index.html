@@ -12,11 +12,11 @@
         <img src="./images/beSmart_bank_logo.png" alt="website logo" class="website-logo">
         <div class="login-credentials">
             <div class="login-form">
-                <form action="./action_page.php">
+                <form action="#">
                     <input type="text" id="user-ID" placeholder="user" class="nav-user-id-input">
                     <input type="password" id="user-Pin" placeholder="PIN" maxlength="4" class="nav-user-pin-input">
+                    <button class="btn btn-user-credentials-login">Login</button>
                 </form>
-                <button class="submit-arrow">Login</button>
             </div>
             <div class="wrong-creadentials-text">
                 <p>User not found, check user id/password.</p>
@@ -30,9 +30,14 @@
                     <h3>Current balance</h3>
                     <p>As of <span class="curr-date">3/9/2024</span>, <span class="curr-time">3:12 PM</span></p>
                 </div>
-                <div class="current-amount">
+                <div class="current-balance-amount">
                     <p>$00.00</p>
                 </div>
+            </div>
+            <div class="in-out-interest-div">
+                <p >Cr. : <span class="in-total-credited">$00.00</span></p>
+                <p>Dr. : <span class="out-total-debited">$00.00</span></p>
+                <p>Interest: <span class="interest-amount">$00.00</span></p>
             </div>
             <div class="current-user-transactions-and-transfer-request-close">
                 <div class="current-user-transactions">
@@ -41,7 +46,7 @@
                             <span class="deposited-transaction">DEPOSIT</span>
                             <span class="">TODAY</span>
                         </div>
-                        <div class="current-transaction-amount">$5,000.00</div>
+                        <div class="current-transaction-amount">$00.00</div>
                     </div>
                     <hr>
                     <div class="user-transaction-details">
@@ -49,47 +54,53 @@
                             <span class="withdrawal-transaction">WITHDRAWAL</span>
                             <span class="">TODAY</span>
                         </div>
-                        <div class="current-transaction-amount">-$30.00</div>
+                        <div class="current-transaction-amount">-$00.00</div>
                     </div>
                     <hr>
                 </div>
                 <div class="transfer-request-close-account">
                     <div class="transfer-money">
                         <h1>Transfer money</h1>
-                        <div class="input-transfer-to-amount">
-                            <div class="input-transfer-to">
-                                <input type="text">
-                            <label for="Transfer to">Transfer to</label>
+                        <form action="#" class="transfer-to-form">
+                            <div class="transfer-to-div">
+                                <input type="text" class="input-transfer-money-transfer-to">
+                                <label for="transfer to">Transfer to</label>
                             </div>
                             <div class="input-amount">
-                                <input type="text">
-                                <label for="Transfer to">Amount</label>
+                                <input type="text" class="input-transfer-money-amount">
+                                <label for="amount">Amount</label>
                             </div>
-                            <button class="btn submit-arrow">Transfer</button>
+                            <button class="btn btn-transfer-money">Transfer</button>
+                        </form>
+                        <div class="display-if-something-wrong">
+                            <p class="display-insufficient-balance">insufficient balance!!!</p>
+                            <p class="display-transfer-to-user-not-found">Transfer to user not found!!!</p>
                         </div>
+
                     </div>
                     <div class="request-loan">
                         <h1>Request loan</h1>
-                        <div class="input-transfer-to-amount">
+                        <form action="#" class="request-loan-form">
                             <div class="input-amount">
-                                <input type="text">
+                                <input type="text" class="input-request-loan-amount">
                                 <label for="Transfer to">Amount</label>
                             </div>
-                            <button class="btn submit-arrow">Transfer</button>
-                        </div>
+                            <button class="btn btn-request-loan">Request</button>
+                        </form>
                     </div>
                     <div class="close-account">
                         <h1>Close account</h1>
-                        <div class="input-transfer-to-amount">
-                            <div class="input-transfer-to">
-                                <input type="text">
-                            <label for="Transfer to">Transfer to</label>
-                            </div>
-                            <div class="input-amount">
-                                <input type="text">
-                                <label for="Transfer to">Amount</label>
-                            </div>
-                            <button class="btn submit-arrow">Transfer</button>
+                            <form action="#" class="transfer-to-form">
+                                <div class="transfer-to-div">
+                                    <input type="text" class="input-close-account-transfer-to">
+                                    <label for="Transfer to">Transfer to</label>
+                                </div>
+                                <div class="input-amount">
+                                    <input type="text" class="input-close-account-amount">
+                                    <label for="Transfer to">Amount</label>
+                                </div>
+                                <button class="btn btn-close-account">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
