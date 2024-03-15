@@ -144,7 +144,7 @@ btn_transferMoney.addEventListener('click', function(e) {
         console.log(allAccounts[i].accountHolderName.toLowerCase().trim(),receiverAccount.toLowerCase().trim(), allAccounts[i].accountHolderName.toLowerCase() === receiverAccount.toLowerCase());
         if(allAccounts[i].accountHolderName.toLowerCase() === receiverAccount) {
             input_TransferMoney_TransferTo.value = input_TransferMoney_Amount.value = ' ';
-            console.log("valid user!!");
+            console.log("valid user, welcome!!");
             const deductionAmountFromCurrentUser = -1*sendingAmount;
             currentLoggedInAccount.userTransactions.push(deductionAmountFromCurrentUser);
             allAccounts[i].userTransactions.push(sendingAmount);
