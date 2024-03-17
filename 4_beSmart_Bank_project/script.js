@@ -165,3 +165,6 @@ btn_requestLoan.addEventListener('click', function(e) {
 btn_closeAccount.addEventListener('click', function(e) {
     e.preventDefault();
 });
+
+
+// bug, overflow scroll not working.
