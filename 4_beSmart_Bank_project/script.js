@@ -63,8 +63,9 @@ const displayValidAccountInfo = function(accountHolder) {
     display_CreditedTransactions.textContent = `$${accountHolder.userAllTimeCreditedAmount.toFixed(2)}`;
     display_DebitedTransactions.textContent = `$${accountHolder.userAllTimeDebitedAmount.toFixed(2)}`;
 }
-
+// stores currentLoggedInAccountCredential object.
 let currentLoggedInAccount = undefined;
+
 const checkForValidLoginOrNot = function(userid, userpin)
 {
     for(let i = 0; i < allAccounts.length; i++)
@@ -123,7 +124,7 @@ const allAccounts = [account1, account2, account3];
 
 // ==================== Event Listeners ==================== 
 btn_UserCredentials.addEventListener('click', function(e) {
-    e.preventDefault(); // prevents form from submitting.
+    e.preventDefault(); // prevents form from submitting when we click on a button.
     const inputUserID = input_userID.value;
     const inputUserPin = Number(input_userPin.value);
     checkForValidLoginOrNot(inputUserID, inputUserPin);
@@ -132,6 +133,11 @@ btn_UserCredentials.addEventListener('click', function(e) {
 
 btn_transferMoney.addEventListener('click', function(e) {
     e.preventDefault();
+
+
+    // also check any user is logged in or not. If not, give "first login into your account.";
+
+
     const receiverAccount = input_TransferMoney_TransferTo.value;
     const sendingAmount = Number(input_TransferMoney_Amount.value);
     if(currentLoggedInAccount.userCurrentBalance < sendingAmount) {
@@ -145,8 +151,7 @@ btn_transferMoney.addEventListener('click', function(e) {
         if(allAccounts[i].accountHolderName.toLowerCase() === receiverAccount) {
             input_TransferMoney_TransferTo.value = input_TransferMoney_Amount.value = ' ';
             console.log("valid user, welcome!!");
-            const deductionAmountFromCurrentUser = -1*sendingAmount;
-            currentLoggedInAccount.userTransactions.push(deductionAmountFromCurrentUser);
+            currentLoggedInAccount.userTransactions.push(-sendingAmount);
             allAccounts[i].userTransactions.push(sendingAmount);
             displayValidAccountInfo(currentLoggedInAccount);
             break;
@@ -156,15 +161,20 @@ btn_transferMoney.addEventListener('click', function(e) {
             display_insufficientBalance.style.display = "none";
             display_transferToUserNotFound.style.display = "block";
         }
-        input_TransferMoney_Amount.blur();
+        input_TransferMoney_Amount.blur();  // this will remove the focus from the input which occurs when we click on any input space.
     }
 });
 btn_requestLoan.addEventListener('click', function(e) {
+
+
+    // also check any user is logged in or not. If not, give "first login into your account.";
+
+    if(currentLoggedInAccount === undefined) {
+        
+    }
+
     e.preventDefault();
 });
 btn_closeAccount.addEventListener('click', function(e) {
     e.preventDefault();
 });
-
-
-// bug, overflow scroll not working.
